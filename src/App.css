@@ -1,20 +1,17 @@
-.container {
-  border: 2px solid red;
-  width: 50%;
+.main {
+  width: 20rem;
   margin: auto;
-  margin-top: 5rem;
-
-  height: 30rem;
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
-    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
-    rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 .btn {
-  background-color: deeppink;
+  background-color: rgb(178, 209, 225);
   border: none;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .btn:hover {
   background-color: rgb(194, 129, 164);
+}
+.card {
+  margin: auto;
+  margin-top: 4rem;
 }

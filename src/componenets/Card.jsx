@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import emailicon from "../assets/email.svg";
+import phoneicon from "../assets/phone.svg";
+import locationicon from "../assets/location.svg";
 
 const Card = () => {
   const url = "https://randomuser.me/api/";
@@ -34,37 +37,41 @@ const Card = () => {
   // } = data;
 
   return (
-    <div>
-      <div className="container px-5 pt-3">
-        <div className="first d-flex justify-content-evenly align-items-center">
-          <img src={data.picture.large} className="rounded-circle" alt="" />
-          <h3>
-            {data.name.title} {data.name.first} {data.name.last}
-          </h3>
+    <div className="main">
+      <div className="card">
+        <img
+          src={data?.picture?.large}
+          className="card-img-top rounded"
+          alt="user pic."
+        />
+        <div className="card-body">
+          <h2 className="card-title">
+            {data?.name?.title} {data?.name?.first} {data?.name?.last}
+          </h2>
         </div>
-        <div className="second">
-          <img src="../assets/email.svg" alt="" />
-          <p>{data.email}</p>
-        </div>
-        <div className="third">
-          <img src="" alt="" />
-          <p>{data.phone}</p>
-        </div>
-        <div className="forth">
-          <img src="" alt="" />
-          <p>
-            {data.location.state} - {data.location.country}
-          </p>
-        </div>
-        <div className="last text-center">
-          <p>Age: {data.dob.age}</p>
-          <p>
-            Register Date :{new Date(data.registered.date).toLocaleDateString()}
-          </p>
-        </div>
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item">
+            <img src={emailicon} alt="" width="10%" className="me-5" />
+            {data?.email}
+          </li>
+          <li className="list-group-item">
+            <img src={phoneicon} alt="" width="10%" className="me-5" />
+            {data.phone}
+          </li>
+          <li className="list-group-item">
+            <img src={locationicon} alt="" width="10%" className="me-5" />
+            {data?.location?.state} - {data?.location?.country}
+          </li>
+          <li className="list-group-item text-center">
+            Age: {data?.dob?.age} <br />
+            Register Date :
+            {new Date(data?.registered?.date).toLocaleDateString()}
+          </li>
+        </ul>
       </div>
-      <div className="button text-center mt-5">
-        <button type="button" className="btn fs-2" onClick={selectUser}>
+
+      <div className="button text-center mt-2">
+        <button type="button" className="btn fs-3" onClick={selectUser}>
           Random User
         </button>
       </div>
