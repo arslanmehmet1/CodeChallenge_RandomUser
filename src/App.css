@@ -4,12 +4,12 @@
 }
 
 .btn {
-  background-color: rgb(104, 170, 86);
+  background-color: rgb(151, 196, 207);
   border: none;
   margin-bottom: 5rem;
 }
 .btn:hover {
-  background-color: rgb(40, 184, 14);
+  background-color: rgb(210, 223, 208);
 }
 .card {
   margin: auto;
@@ -17,4 +17,19 @@
 }
 .card-img-top {
   width: auto;
+}
+.name {
+  background-color: #f8ede3;
+}
+.mail {
+  background-color: #dfd3c3;
+}
+.tel {
+  background-color: #d0b8a8;
+}
+.address {
+  background-color: #7d6e833c;
+}
+.age {
+  background-color: #7d6e83;
 }
